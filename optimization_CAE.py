@@ -211,7 +211,7 @@ for ii in range(0, len_valid):
 Valid_raw = np.zeros(len_valid*h*w).reshape(len_valid,h,w)
 
 for ii in range(0, len_valid):
-    Valid_raw[ii,:,:] = (Data_norm_valid[ii,:,:,0]*(maxmax - minmin))-minmin
+    Valid_raw[ii,:,:] = (Data_norm_valid[ii,:,:,0]*(maxmax - minmin))+minmin
     
 print("290line")
 
