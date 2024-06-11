@@ -160,11 +160,11 @@ for index in range(0,num):
     grad_y= np.linspace(1,200,200)
 
     grad_ram = cv2.resize(heat_map1,(300,200),interpolation=cv2.INTER_CUBIC)
-    grad_ram_nosum[:,:,index] = grad_ram
+    grad_ram_nomean[:,:,index] = grad_ram
 
 for ii in range(0,200):
     for jj in range(0,300):
-        mean_grad_ram[ii,jj] = np.mean(grad_ram_nosum[ii,jj,:])
+        mean_grad_ram[ii,jj] = np.mean(grad_ram_nomean[ii,jj,:])
         #The average grad-ram image of num images
 
         
