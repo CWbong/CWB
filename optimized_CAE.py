@@ -258,7 +258,7 @@ decay_steps1 = (train_len/batch_size1)*decay_steps1
 lr_schedule1 = tf.keras.optimizers.schedules.ExponentialDecay(
     initial_learning_rate1,
     decay_steps=decay_steps1,
-    decay_rate=decay_rate1, # 전체 steps수에 얼마나 cosine annealing을 반복할지 결정하는 계수
+    decay_rate=decay_rate1,
     staircase=True,
     name=None)
 
